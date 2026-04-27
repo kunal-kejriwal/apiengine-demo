@@ -1,6 +1,3 @@
-Here's the full README.md — copy and paste:
-
-```markdown
 # APIEngine Demo
 
 A live demo app showcasing the **[APIEngine React SDK](https://www.npmjs.com/package/@apiengine/react-sdk)** — drop-in React components for auth, protected routes, and live data forms backed by [APIEngine](https://theapiengine.com).
