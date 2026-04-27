@@ -1,16 +1,55 @@
-# React + Vite
+Here's the full README.md — copy and paste:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# APIEngine Demo
 
-Currently, two official plugins are available:
+A live demo app showcasing the **[APIEngine React SDK](https://www.npmjs.com/package/@apiengine/react-sdk)** — drop-in React components for auth, protected routes, and live data forms backed by [APIEngine](https://theapiengine.com).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built with React 19 + Vite. Every page in this app is wired up using SDK primitives — no hand-rolled auth, no custom form plumbing.
 
-## React Compiler
+## What's inside
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **JWT Auth** — login, signup, silent token refresh
+- **Email Verification** — 6-digit code flow
+- **`<ProtectedRoute>`** — guard any route, redirect guests
+- **`<AppNavbar>` / `<AppHero>`** — auth-aware UI that adapts to guest vs logged-in state
+- **Blueprint Mode** — undefined routes render a guided scaffold instead of a blank 404
+- **Live Data Forms** — `<JsonDbForm>`, `<CustomObjectForm>`, `<StandardObjectForm>` push records straight to your APIEngine backend
 
-## Expanding the ESLint configuration
+## Quick start
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173.
+
+## Configuration
+
+Create a `.env` file in the project root:
+
+```env
+VITE_API_BASE_URL=https://api.theapiengine.com
+VITE_API_KEY=your-api-key
+VITE_APP_NAME=My App
+VITE_DOCS_URL=
+VITE_DASHBOARD_URL=
+```
+
+Get your API key from the [APIEngine dashboard](https://theapiengine.com).
+
+## Links
+
+- **React SDK on npm** — https://www.npmjs.com/package/@apiengine/react-sdk
+- **APIEngine** — https://theapiengine.com
+
+## Scripts
+
+| Command           | What it does                |
+| ----------------- | --------------------------- |
+| `npm run dev`     | Start Vite dev server (HMR) |
+| `npm run build`   | Production build            |
+| `npm run preview` | Preview the production build |
+| `npm run lint`    | Run ESLint                  |
+```
